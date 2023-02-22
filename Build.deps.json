@@ -1,0 +1,597 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Build/1.0.0": {
+        "dependencies": {
+          "Cake.Frosting": "1.0.0-rc0002",
+          "Cake.MarkdownToPdf": "2.5.2"
+        },
+        "runtime": {
+          "Build.dll": {}
+        }
+      },
+      "Autofac/6.1.0": {
+        "dependencies": {
+          "System.Diagnostics.DiagnosticSource": "4.7.1"
+        },
+        "runtime": {
+          "lib/netstandard2.1/Autofac.dll": {
+            "assemblyVersion": "6.1.0.0",
+            "fileVersion": "6.1.0.0"
+          }
+        }
+      },
+      "Cake.Cli/1.0.0-rc0002": {
+        "dependencies": {
+          "Autofac": "6.1.0",
+          "Cake.Core": "1.0.0-rc0002",
+          "Spectre.Cli": "0.46.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Cake.Cli.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Cake.Common/1.0.0-rc0002": {
+        "dependencies": {
+          "Cake.Core": "1.0.0-rc0002"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Cake.Common.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Cake.Core/1.0.0-rc0002": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.7.0",
+          "Microsoft.Win32.Registry": "5.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Cake.Core.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Cake.Frosting/1.0.0-rc0002": {
+        "dependencies": {
+          "Cake.Cli": "1.0.0-rc0002",
+          "Cake.Common": "1.0.0-rc0002",
+          "Cake.Core": "1.0.0-rc0002",
+          "Cake.NuGet": "1.0.0-rc0002",
+          "Microsoft.Extensions.DependencyInjection": "5.0.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Cake.Frosting.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Cake.MarkdownToPdf/2.5.2": {
+        "runtime": {
+          "lib/netstandard2.0/Cake.MarkdownToPdf.dll": {
+            "assemblyVersion": "2.5.2.0",
+            "fileVersion": "2.5.2.0"
+          },
+          "lib/netstandard2.0/Markdig.dll": {
+            "assemblyVersion": "0.17.1.0",
+            "fileVersion": "0.17.1.0"
+          },
+          "lib/netstandard2.0/wkhtmltopdf.exe": {
+            "fileVersion": "0.12.4.0"
+          }
+        }
+      },
+      "Cake.NuGet/1.0.0-rc0002": {
+        "dependencies": {
+          "Cake.Core": "1.0.0-rc0002",
+          "Microsoft.DotNet.PlatformAbstractions": "3.1.6",
+          "Newtonsoft.Json": "12.0.3",
+          "NuGet.Common": "5.8.0",
+          "NuGet.Frameworks": "5.8.0",
+          "NuGet.Packaging": "5.8.0",
+          "NuGet.Protocol": "5.8.0",
+          "NuGet.Resolver": "5.8.0",
+          "NuGet.Versioning": "5.8.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Cake.NuGet.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Microsoft.CSharp/4.7.0": {},
+      "Microsoft.DotNet.PlatformAbstractions/3.1.6": {
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.DotNet.PlatformAbstractions.dll": {
+            "assemblyVersion": "3.1.6.0",
+            "fileVersion": "3.100.620.31604"
+          }
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection/5.0.1": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.dll": {
+            "assemblyVersion": "5.0.0.1",
+            "fileVersion": "5.0.120.57516"
+          }
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/5.0.0": {
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.20.51904"
+          }
+        }
+      },
+      "Microsoft.NETCore.Platforms/5.0.0": {},
+      "Microsoft.Win32.Registry/5.0.0": {
+        "dependencies": {
+          "System.Security.AccessControl": "5.0.0",
+          "System.Security.Principal.Windows": "5.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Win32.Registry.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.20.51904"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netstandard2.0/Microsoft.Win32.Registry.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.20.51904"
+          }
+        }
+      },
+      "Newtonsoft.Json/12.0.3": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.3.23909"
+          }
+        }
+      },
+      "NuGet.Common/5.8.0": {
+        "dependencies": {
+          "NuGet.Frameworks": "5.8.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/NuGet.Common.dll": {
+            "assemblyVersion": "5.8.0.6930",
+            "fileVersion": "5.8.0.6930"
+          }
+        }
+      },
+      "NuGet.Configuration/5.8.0": {
+        "dependencies": {
+          "NuGet.Common": "5.8.0",
+          "System.Security.Cryptography.ProtectedData": "4.4.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/NuGet.Configuration.dll": {
+            "assemblyVersion": "5.8.0.6930",
+            "fileVersion": "5.8.0.6930"
+          }
+        }
+      },
+      "NuGet.Frameworks/5.8.0": {
+        "runtime": {
+          "lib/netstandard2.0/NuGet.Frameworks.dll": {
+            "assemblyVersion": "5.8.0.6930",
+            "fileVersion": "5.8.0.6930"
+          }
+        }
+      },
+      "NuGet.Packaging/5.8.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.3",
+          "NuGet.Configuration": "5.8.0",
+          "NuGet.Versioning": "5.8.0",
+          "System.Security.Cryptography.Cng": "5.0.0-preview.3.20214.6",
+          "System.Security.Cryptography.Pkcs": "5.0.0-preview.3.20214.6"
+        },
+        "runtime": {
+          "lib/netstandard2.0/NuGet.Packaging.dll": {
+            "assemblyVersion": "5.8.0.6930",
+            "fileVersion": "5.8.0.6930"
+          }
+        }
+      },
+      "NuGet.Protocol/5.8.0": {
+        "dependencies": {
+          "NuGet.Packaging": "5.8.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/NuGet.Protocol.dll": {
+            "assemblyVersion": "5.8.0.6930",
+            "fileVersion": "5.8.0.6930"
+          }
+        }
+      },
+      "NuGet.Resolver/5.8.0": {
+        "dependencies": {
+          "NuGet.Protocol": "5.8.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/NuGet.Resolver.dll": {
+            "assemblyVersion": "5.8.0.6930",
+            "fileVersion": "5.8.0.6930"
+          }
+        }
+      },
+      "NuGet.Versioning/5.8.0": {
+        "runtime": {
+          "lib/netstandard2.0/NuGet.Versioning.dll": {
+            "assemblyVersion": "5.8.0.6930",
+            "fileVersion": "5.8.0.6930"
+          }
+        }
+      },
+      "Spectre.Cli/0.46.0": {
+        "dependencies": {
+          "Spectre.Console": "0.27.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Spectre.Cli.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.46.0.0"
+          }
+        }
+      },
+      "Spectre.Console/0.27.0": {
+        "dependencies": {
+          "Wcwidth": "0.2.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Spectre.Console.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.27.0.0"
+          }
+        }
+      },
+      "System.Diagnostics.DiagnosticSource/4.7.1": {
+        "runtime": {
+          "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll": {
+            "assemblyVersion": "4.0.5.0",
+            "fileVersion": "4.700.20.21406"
+          }
+        }
+      },
+      "System.Security.AccessControl/5.0.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "5.0.0",
+          "System.Security.Principal.Windows": "5.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Security.AccessControl.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.20.51904"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netcoreapp2.0/System.Security.AccessControl.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.20.51904"
+          }
+        }
+      },
+      "System.Security.Cryptography.Cng/5.0.0-preview.3.20214.6": {
+        "runtime": {
+          "lib/netcoreapp3.0/System.Security.Cryptography.Cng.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.20.21406"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netcoreapp3.0/System.Security.Cryptography.Cng.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.20.21406"
+          }
+        }
+      },
+      "System.Security.Cryptography.Pkcs/5.0.0-preview.3.20214.6": {
+        "dependencies": {
+          "System.Security.Cryptography.Cng": "5.0.0-preview.3.20214.6"
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/System.Security.Cryptography.Pkcs.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.20.21406"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netcoreapp3.0/System.Security.Cryptography.Pkcs.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.20.21406"
+          }
+        }
+      },
+      "System.Security.Cryptography.ProtectedData/4.4.0": {
+        "runtime": {
+          "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {
+            "assemblyVersion": "4.0.2.0",
+            "fileVersion": "4.6.25519.3"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.2.0",
+            "fileVersion": "4.6.25519.3"
+          }
+        }
+      },
+      "System.Security.Principal.Windows/5.0.0": {
+        "runtime": {
+          "lib/netstandard2.0/System.Security.Principal.Windows.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.20.51904"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/netcoreapp2.1/System.Security.Principal.Windows.dll": {
+            "rid": "unix",
+            "assetType": "runtime",
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.20.51904"
+          },
+          "runtimes/win/lib/netcoreapp2.1/System.Security.Principal.Windows.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.20.51904"
+          }
+        }
+      },
+      "Wcwidth/0.2.0": {
+        "runtime": {
+          "lib/netstandard2.0/Wcwidth.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.2.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Build/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Autofac/6.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-22aXncFDye08TsXHobcxAoZFBeaJ9nrAxGzk9YHLLaIkYO7aeAA0Sz7Mii9qsfB76S1gdhebqMv8QsnknJMT/w==",
+      "path": "autofac/6.1.0",
+      "hashPath": "autofac.6.1.0.nupkg.sha512"
+    },
+    "Cake.Cli/1.0.0-rc0002": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6Jah2ugpFrVTS87SlPVKBbhkemq6UGpi6fJ3lHIC70IrVKGctvp0kdpGLzIVx7dvAJZ/Ld/fFIVi2M8Hx2qRaA==",
+      "path": "cake.cli/1.0.0-rc0002",
+      "hashPath": "cake.cli.1.0.0-rc0002.nupkg.sha512"
+    },
+    "Cake.Common/1.0.0-rc0002": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-O7+QlhZyYQlH0JloCWWT9S0tT3tF7eWWtokQ80q77mSP1RhyunMiVZ3c6oaNRU4EqO/oeUofx7WzT+LKgwIXZA==",
+      "path": "cake.common/1.0.0-rc0002",
+      "hashPath": "cake.common.1.0.0-rc0002.nupkg.sha512"
+    },
+    "Cake.Core/1.0.0-rc0002": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+W44P/YpWjnRenC0RKXMGa3aHBc0POYlQ/wmMQa1CRgct1E9pCqujhm/LCovmpgE/KRzGhhLldIojQ47JA/1Ug==",
+      "path": "cake.core/1.0.0-rc0002",
+      "hashPath": "cake.core.1.0.0-rc0002.nupkg.sha512"
+    },
+    "Cake.Frosting/1.0.0-rc0002": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1jn9jZdKbMm8Ff6SSNa5TlQbd3EHRgdthh82Z85hmOV1vwUg0xsTfd9xLeWLqqxOzIdckI9CX3Sgg5fwN0pjpA==",
+      "path": "cake.frosting/1.0.0-rc0002",
+      "hashPath": "cake.frosting.1.0.0-rc0002.nupkg.sha512"
+    },
+    "Cake.MarkdownToPdf/2.5.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-P+H4pAZYJ/OrkUP0rtB8duWLRqfW24ozx2jCnklTwer8+kFHPjYHbKhBP+Gnch0kh5PPYscmVadFfGI5bu4nbg==",
+      "path": "cake.markdowntopdf/2.5.2",
+      "hashPath": "cake.markdowntopdf.2.5.2.nupkg.sha512"
+    },
+    "Cake.NuGet/1.0.0-rc0002": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-NBT9JR1MWyuiRbr082ax09wY5SZgkTalqmyMqHEO365Sg943ipVLmdj2yXSDfRIZb58gt7fn3jKu292gSr8Big==",
+      "path": "cake.nuget/1.0.0-rc0002",
+      "hashPath": "cake.nuget.1.0.0-rc0002.nupkg.sha512"
+    },
+    "Microsoft.CSharp/4.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pTj+D3uJWyN3My70i2Hqo+OXixq3Os2D1nJ2x92FFo6sk8fYS1m1WLNTs0Dc1uPaViH0YvEEwvzddQ7y4rhXmA==",
+      "path": "microsoft.csharp/4.7.0",
+      "hashPath": "microsoft.csharp.4.7.0.nupkg.sha512"
+    },
+    "Microsoft.DotNet.PlatformAbstractions/3.1.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jek4XYaQ/PGUwDKKhwR8K47Uh1189PFzMeLqO83mXrXQVIpARZCcfuDedH50YDTepBkfijCZN5U/vZi++erxtg==",
+      "path": "microsoft.dotnet.platformabstractions/3.1.6",
+      "hashPath": "microsoft.dotnet.platformabstractions.3.1.6.nupkg.sha512"
+    },
+    "Microsoft.Extensions.DependencyInjection/5.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-//mDNrYeiJ0eh/awFhDFJQzkRVra/njU5Y4fyK7X29g5HScrzbUkKOKlyTtygthcGFt4zNC8G5CFCjb/oizomA==",
+      "path": "microsoft.extensions.dependencyinjection/5.0.1",
+      "hashPath": "microsoft.extensions.dependencyinjection.5.0.1.nupkg.sha512"
+    },
+    "Microsoft.Extensions.DependencyInjection.Abstractions/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ORj7Zh81gC69TyvmcUm9tSzytcy8AVousi+IVRAI8nLieQjOFryRusSFh7+aLk16FN9pQNqJAiMd7BTKINK0kA==",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/5.0.0",
+      "hashPath": "microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512"
+    },
+    "Microsoft.NETCore.Platforms/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-VyPlqzH2wavqquTcYpkIIAQ6WdenuKoFN0BdYBbCWsclXacSOHNQn66Gt4z5NBqEYW0FAPm5rlvki9ZiCij5xQ==",
+      "path": "microsoft.netcore.platforms/5.0.0",
+      "hashPath": "microsoft.netcore.platforms.5.0.0.nupkg.sha512"
+    },
+    "Microsoft.Win32.Registry/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dDoKi0PnDz31yAyETfRntsLArTlVAVzUzCIvvEDsDsucrl33Dl8pIJG06ePTJTI3tGpeyHS9Cq7Foc/s4EeKcg==",
+      "path": "microsoft.win32.registry/5.0.0",
+      "hashPath": "microsoft.win32.registry.5.0.0.nupkg.sha512"
+    },
+    "Newtonsoft.Json/12.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
+      "path": "newtonsoft.json/12.0.3",
+      "hashPath": "newtonsoft.json.12.0.3.nupkg.sha512"
+    },
+    "NuGet.Common/5.8.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ipJzbjfJsfkjeCzvbIimbnAnDgPXBrPhQP9rmFYxmyt3Zh8Kw5F78Th/CWeY58D25uq7OwOwAGodXDhdmqNdpw==",
+      "path": "nuget.common/5.8.0",
+      "hashPath": "nuget.common.5.8.0.nupkg.sha512"
+    },
+    "NuGet.Configuration/5.8.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gmgN/33Q3UtK/HRnBdwiZkSwUXubjswqLjagNbVyQBNyH5/lO6ceWJ2ePKcwkZxtgdiYGG32FDs02DZdGuXl+Q==",
+      "path": "nuget.configuration/5.8.0",
+      "hashPath": "nuget.configuration.5.8.0.nupkg.sha512"
+    },
+    "NuGet.Frameworks/5.8.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qmHdiRcRNSZS9cNMzzCyAb4veOBQnc4r/y+VKkPKpIm6cXBTYgVEoX6J7zVwTwT83xNIuRWwBrDotIUIc4nOSQ==",
+      "path": "nuget.frameworks/5.8.0",
+      "hashPath": "nuget.frameworks.5.8.0.nupkg.sha512"
+    },
+    "NuGet.Packaging/5.8.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4L/wKykECl34rK6wmkzrqpjh8tNOpGyJmUbBO/BY/wMQh0KcmTuBqVYnOrjfwzbT0uLeUHanzCX5WJa+09RUgA==",
+      "path": "nuget.packaging/5.8.0",
+      "hashPath": "nuget.packaging.5.8.0.nupkg.sha512"
+    },
+    "NuGet.Protocol/5.8.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5SOtSbO7jJP2f5jXBSdmm+Hd1sTPBibzJorw+DywjKU8JCF0yBw3h81Ek6qOuHVc8stmfR+srn3u9ExRxuwcUA==",
+      "path": "nuget.protocol/5.8.0",
+      "hashPath": "nuget.protocol.5.8.0.nupkg.sha512"
+    },
+    "NuGet.Resolver/5.8.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-OGwn37zPZQY6hwmQq51BTKhS+m0wz3DVz3o+EJWauGoCcMvB8BF/N2K1Xp2V6TPxeouC1vjw5BAIVQp5hlF48A==",
+      "path": "nuget.resolver/5.8.0",
+      "hashPath": "nuget.resolver.5.8.0.nupkg.sha512"
+    },
+    "NuGet.Versioning/5.8.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0JqM9Tbpg3+CwXBXzLv64BMUru//UZVxfVy48ng7CQ5rNuI/4xI43jxXWkqM8MfLs6RibhadzQeNWB82gW7JDw==",
+      "path": "nuget.versioning/5.8.0",
+      "hashPath": "nuget.versioning.5.8.0.nupkg.sha512"
+    },
+    "Spectre.Cli/0.46.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-KBhXKLlrYbluNP1qXIRXkHLRvEZivTQbpnwAiFhYIjsd9W0s8f7/QTg+UekfPdNCYfUXSFFMRwTGwSDF692UXw==",
+      "path": "spectre.cli/0.46.0",
+      "hashPath": "spectre.cli.0.46.0.nupkg.sha512"
+    },
+    "Spectre.Console/0.27.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bPC42cDPCYw6SsSa3/LEnyHjMOq2KYz16eprqoWCcD21YBZ+LcYEMQI5DInUz/WjC8dUCZA+zxs3nf1LSEpwhw==",
+      "path": "spectre.console/0.27.0",
+      "hashPath": "spectre.console.0.27.0.nupkg.sha512"
+    },
+    "System.Diagnostics.DiagnosticSource/4.7.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-j81Lovt90PDAq8kLpaJfJKV/rWdWuEk6jfV+MBkee33vzYLEUsy4gXK8laa9V2nZlLM9VM9yA/OOQxxPEJKAMw==",
+      "path": "system.diagnostics.diagnosticsource/4.7.1",
+      "hashPath": "system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512"
+    },
+    "System.Security.AccessControl/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dagJ1mHZO3Ani8GH0PHpPEe/oYO+rVdbQjvjJkBRNQkX4t0r1iaeGn8+/ybkSLEan3/slM0t59SVdHzuHf2jmw==",
+      "path": "system.security.accesscontrol/5.0.0",
+      "hashPath": "system.security.accesscontrol.5.0.0.nupkg.sha512"
+    },
+    "System.Security.Cryptography.Cng/5.0.0-preview.3.20214.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dqufaGuwo4a3yhe49TuH0ZCSCAktOAkbSMCpH2JcGHBxJzy8h1q4RVM5p2XzshduIRXn646ipkKg9qPIEnjr6g==",
+      "path": "system.security.cryptography.cng/5.0.0-preview.3.20214.6",
+      "hashPath": "system.security.cryptography.cng.5.0.0-preview.3.20214.6.nupkg.sha512"
+    },
+    "System.Security.Cryptography.Pkcs/5.0.0-preview.3.20214.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wg02cS0DJRtdcYF0N0hRjY7WCFWFZXZyOXNvJeWD0SSFk6zrrp1t3iFVfRcHg2vIJ/q5NFcXVRvS6TLbSWxdzw==",
+      "path": "system.security.cryptography.pkcs/5.0.0-preview.3.20214.6",
+      "hashPath": "system.security.cryptography.pkcs.5.0.0-preview.3.20214.6.nupkg.sha512"
+    },
+    "System.Security.Cryptography.ProtectedData/4.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cJV7ScGW7EhatRsjehfvvYVBvtiSMKgN8bOVI0bQhnF5bU7vnHVIsH49Kva7i7GWaWYvmEzkYVk1TC+gZYBEog==",
+      "path": "system.security.cryptography.protecteddata/4.4.0",
+      "hashPath": "system.security.cryptography.protecteddata.4.4.0.nupkg.sha512"
+    },
+    "System.Security.Principal.Windows/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-t0MGLukB5WAVU9bO3MGzvlGnyJPgUlcwerXn1kzBRjwLKixT96XV0Uza41W49gVd8zEMFu9vQEFlv0IOrytICA==",
+      "path": "system.security.principal.windows/5.0.0",
+      "hashPath": "system.security.principal.windows.5.0.0.nupkg.sha512"
+    },
+    "Wcwidth/0.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-H7no2W0vuLJTvSPanlrijtG3UdJNVoeWBOp2a5dJFVa2tqSQuP5GfbJw1xAtPG9agRW310nFTUUsyPz5tuVIxw==",
+      "path": "wcwidth/0.2.0",
+      "hashPath": "wcwidth.0.2.0.nupkg.sha512"
+    }
+  }
+}
