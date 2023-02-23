@@ -57,7 +57,6 @@ namespace EveOPreview.View
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.MinimizeToTrayCheckBox = new Guna.UI2.WinForms.Guna2CheckBox();
             this.MinimizeInactiveClientsCheckBox = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.EnableClientLayoutTrackingCheckBox = new Guna.UI2.WinForms.Guna2CheckBox();
             this.HideActiveClientThumbnailCheckBox = new Guna.UI2.WinForms.Guna2CheckBox();
             this.ShowThumbnailsAlwaysOnTopCheckBox = new Guna.UI2.WinForms.Guna2CheckBox();
             this.HideThumbnailsOnLostFocusCheckBox = new Guna.UI2.WinForms.Guna2CheckBox();
@@ -66,6 +65,7 @@ namespace EveOPreview.View
             this.ThumbnailsHeightNumericEdit = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.ThumbnailOpacityTrackBar = new Guna.UI2.WinForms.Guna2TrackBar();
             this.ZoomTabPage = new System.Windows.Forms.TabPage();
+            this.ThumbnailZoomFactorNumericEdit = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.ZoomAnchorPanel = new System.Windows.Forms.Panel();
             this.ZoomAanchorNWRadioButton = new System.Windows.Forms.RadioButton();
             this.ZoomAanchorNRadioButton = new System.Windows.Forms.RadioButton();
@@ -83,23 +83,6 @@ namespace EveOPreview.View
             this.ShowThumbnailOverlaysCheckBox = new Guna.UI2.WinForms.Guna2CheckBox();
             this.ShowThumbnailFramesCheckBox = new Guna.UI2.WinForms.Guna2CheckBox();
             this.ThumbnailsList = new System.Windows.Forms.CheckedListBox();
-            this.VersionLabel = new System.Windows.Forms.Label();
-            this.NotifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
-            this.TrayMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.ThumbnailZoomFactorNumericEdit = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -112,6 +95,22 @@ namespace EveOPreview.View
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.VersionLabel = new System.Windows.Forms.Label();
+            this.NotifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.TrayMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             RestoreWindowMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ExitMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             TitleMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -144,6 +143,7 @@ namespace EveOPreview.View
             ((System.ComponentModel.ISupportInitialize)(this.ThumbnailsHeightNumericEdit)).BeginInit();
             this.ZoomTabPage.SuspendLayout();
             ZoomSettingsPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ThumbnailZoomFactorNumericEdit)).BeginInit();
             this.ZoomAnchorPanel.SuspendLayout();
             OverlayTabPage.SuspendLayout();
             OverlaySettingsPanel.SuspendLayout();
@@ -152,7 +152,6 @@ namespace EveOPreview.View
             AboutTabPage.SuspendLayout();
             AboutPanel.SuspendLayout();
             this.TrayMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ThumbnailZoomFactorNumericEdit)).BeginInit();
             this.SuspendLayout();
             // 
             // RestoreWindowMenuItem
@@ -232,7 +231,6 @@ namespace EveOPreview.View
             GeneralSettingsPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             GeneralSettingsPanel.Controls.Add(this.MinimizeToTrayCheckBox);
             GeneralSettingsPanel.Controls.Add(this.MinimizeInactiveClientsCheckBox);
-            GeneralSettingsPanel.Controls.Add(this.EnableClientLayoutTrackingCheckBox);
             GeneralSettingsPanel.Controls.Add(this.HideActiveClientThumbnailCheckBox);
             GeneralSettingsPanel.Controls.Add(this.ShowThumbnailsAlwaysOnTopCheckBox);
             GeneralSettingsPanel.Controls.Add(this.HideThumbnailsOnLostFocusCheckBox);
@@ -266,7 +264,7 @@ namespace EveOPreview.View
             this.MinimizeInactiveClientsCheckBox.AutoSize = true;
             this.MinimizeInactiveClientsCheckBox.CheckedState.BorderRadius = 0;
             this.MinimizeInactiveClientsCheckBox.CheckedState.BorderThickness = 0;
-            this.MinimizeInactiveClientsCheckBox.Location = new System.Drawing.Point(8, 79);
+            this.MinimizeInactiveClientsCheckBox.Location = new System.Drawing.Point(8, 55);
             this.MinimizeInactiveClientsCheckBox.Name = "MinimizeInactiveClientsCheckBox";
             this.MinimizeInactiveClientsCheckBox.Size = new System.Drawing.Size(165, 17);
             this.MinimizeInactiveClientsCheckBox.TabIndex = 24;
@@ -276,21 +274,6 @@ namespace EveOPreview.View
             this.MinimizeInactiveClientsCheckBox.UseVisualStyleBackColor = true;
             this.MinimizeInactiveClientsCheckBox.CheckedChanged += new System.EventHandler(this.OptionChanged_Handler);
             // 
-            // EnableClientLayoutTrackingCheckBox
-            // 
-            this.EnableClientLayoutTrackingCheckBox.AutoSize = true;
-            this.EnableClientLayoutTrackingCheckBox.CheckedState.BorderRadius = 0;
-            this.EnableClientLayoutTrackingCheckBox.CheckedState.BorderThickness = 0;
-            this.EnableClientLayoutTrackingCheckBox.Location = new System.Drawing.Point(8, 31);
-            this.EnableClientLayoutTrackingCheckBox.Name = "EnableClientLayoutTrackingCheckBox";
-            this.EnableClientLayoutTrackingCheckBox.Size = new System.Drawing.Size(127, 17);
-            this.EnableClientLayoutTrackingCheckBox.TabIndex = 19;
-            this.EnableClientLayoutTrackingCheckBox.Text = "Track client locations";
-            this.EnableClientLayoutTrackingCheckBox.UncheckedState.BorderRadius = 0;
-            this.EnableClientLayoutTrackingCheckBox.UncheckedState.BorderThickness = 0;
-            this.EnableClientLayoutTrackingCheckBox.UseVisualStyleBackColor = true;
-            this.EnableClientLayoutTrackingCheckBox.CheckedChanged += new System.EventHandler(this.OptionChanged_Handler);
-            // 
             // HideActiveClientThumbnailCheckBox
             // 
             this.HideActiveClientThumbnailCheckBox.AutoSize = true;
@@ -298,7 +281,7 @@ namespace EveOPreview.View
             this.HideActiveClientThumbnailCheckBox.CheckedState.BorderRadius = 0;
             this.HideActiveClientThumbnailCheckBox.CheckedState.BorderThickness = 0;
             this.HideActiveClientThumbnailCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.HideActiveClientThumbnailCheckBox.Location = new System.Drawing.Point(8, 55);
+            this.HideActiveClientThumbnailCheckBox.Location = new System.Drawing.Point(8, 31);
             this.HideActiveClientThumbnailCheckBox.Name = "HideActiveClientThumbnailCheckBox";
             this.HideActiveClientThumbnailCheckBox.Size = new System.Drawing.Size(186, 17);
             this.HideActiveClientThumbnailCheckBox.TabIndex = 20;
@@ -315,7 +298,7 @@ namespace EveOPreview.View
             this.ShowThumbnailsAlwaysOnTopCheckBox.CheckedState.BorderRadius = 0;
             this.ShowThumbnailsAlwaysOnTopCheckBox.CheckedState.BorderThickness = 0;
             this.ShowThumbnailsAlwaysOnTopCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ShowThumbnailsAlwaysOnTopCheckBox.Location = new System.Drawing.Point(8, 103);
+            this.ShowThumbnailsAlwaysOnTopCheckBox.Location = new System.Drawing.Point(8, 79);
             this.ShowThumbnailsAlwaysOnTopCheckBox.Name = "ShowThumbnailsAlwaysOnTopCheckBox";
             this.ShowThumbnailsAlwaysOnTopCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.ShowThumbnailsAlwaysOnTopCheckBox.Size = new System.Drawing.Size(137, 17);
@@ -333,7 +316,7 @@ namespace EveOPreview.View
             this.HideThumbnailsOnLostFocusCheckBox.CheckedState.BorderRadius = 0;
             this.HideThumbnailsOnLostFocusCheckBox.CheckedState.BorderThickness = 0;
             this.HideThumbnailsOnLostFocusCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.HideThumbnailsOnLostFocusCheckBox.Location = new System.Drawing.Point(8, 127);
+            this.HideThumbnailsOnLostFocusCheckBox.Location = new System.Drawing.Point(8, 103);
             this.HideThumbnailsOnLostFocusCheckBox.Name = "HideThumbnailsOnLostFocusCheckBox";
             this.HideThumbnailsOnLostFocusCheckBox.Size = new System.Drawing.Size(215, 17);
             this.HideThumbnailsOnLostFocusCheckBox.TabIndex = 22;
@@ -350,7 +333,7 @@ namespace EveOPreview.View
             this.EnablePerClientThumbnailsLayoutsCheckBox.CheckedState.BorderRadius = 0;
             this.EnablePerClientThumbnailsLayoutsCheckBox.CheckedState.BorderThickness = 0;
             this.EnablePerClientThumbnailsLayoutsCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.EnablePerClientThumbnailsLayoutsCheckBox.Location = new System.Drawing.Point(8, 151);
+            this.EnablePerClientThumbnailsLayoutsCheckBox.Location = new System.Drawing.Point(8, 127);
             this.EnablePerClientThumbnailsLayoutsCheckBox.Name = "EnablePerClientThumbnailsLayoutsCheckBox";
             this.EnablePerClientThumbnailsLayoutsCheckBox.Size = new System.Drawing.Size(187, 17);
             this.EnablePerClientThumbnailsLayoutsCheckBox.TabIndex = 23;
@@ -477,6 +460,32 @@ namespace EveOPreview.View
             ZoomSettingsPanel.Name = "ZoomSettingsPanel";
             ZoomSettingsPanel.Size = new System.Drawing.Size(232, 210);
             ZoomSettingsPanel.TabIndex = 36;
+            // 
+            // ThumbnailZoomFactorNumericEdit
+            // 
+            this.ThumbnailZoomFactorNumericEdit.BackColor = System.Drawing.Color.Transparent;
+            this.ThumbnailZoomFactorNumericEdit.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.ThumbnailZoomFactorNumericEdit.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ThumbnailZoomFactorNumericEdit.Location = new System.Drawing.Point(81, 29);
+            this.ThumbnailZoomFactorNumericEdit.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.ThumbnailZoomFactorNumericEdit.Minimum = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            this.ThumbnailZoomFactorNumericEdit.Name = "ThumbnailZoomFactorNumericEdit";
+            this.ThumbnailZoomFactorNumericEdit.Size = new System.Drawing.Size(77, 20);
+            this.ThumbnailZoomFactorNumericEdit.TabIndex = 41;
+            this.ThumbnailZoomFactorNumericEdit.Value = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            this.ThumbnailZoomFactorNumericEdit.ValueChanged += new System.EventHandler(this.OptionChanged_Handler);
             // 
             // ZoomFactorLabel
             // 
@@ -816,188 +825,6 @@ namespace EveOPreview.View
             AboutPanel.Size = new System.Drawing.Size(232, 210);
             AboutPanel.TabIndex = 2;
             // 
-            // VersionLabel
-            // 
-            this.VersionLabel.AutoSize = true;
-            this.VersionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.VersionLabel.Location = new System.Drawing.Point(133, 9);
-            this.VersionLabel.Name = "VersionLabel";
-            this.VersionLabel.Size = new System.Drawing.Size(49, 20);
-            this.VersionLabel.TabIndex = 4;
-            this.VersionLabel.Text = "1.0.0";
-            // 
-            // NameLabel
-            // 
-            NameLabel.AutoSize = true;
-            NameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            NameLabel.Location = new System.Drawing.Point(4, 9);
-            NameLabel.Name = "NameLabel";
-            NameLabel.Size = new System.Drawing.Size(130, 20);
-            NameLabel.TabIndex = 3;
-            NameLabel.Text = "EVE-O Preview";
-            // 
-            // NotifyIcon
-            // 
-            this.NotifyIcon.ContextMenuStrip = this.TrayMenu;
-            this.NotifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("NotifyIcon.Icon")));
-            this.NotifyIcon.Text = "EVE-O Preview";
-            this.NotifyIcon.Visible = true;
-            this.NotifyIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.RestoreMainForm_Handler);
-            // 
-            // TrayMenu
-            // 
-            this.TrayMenu.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.TrayMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            TitleMenuItem,
-            RestoreWindowMenuItem,
-            SeparatorMenuItem,
-            ExitMenuItem});
-            this.TrayMenu.Name = "contextMenuStrip1";
-            this.TrayMenu.Size = new System.Drawing.Size(238, 76);
-            // 
-            // ThumbnailZoomFactorNumericEdit
-            // 
-            this.ThumbnailZoomFactorNumericEdit.BackColor = System.Drawing.Color.Transparent;
-            this.ThumbnailZoomFactorNumericEdit.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.ThumbnailZoomFactorNumericEdit.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.ThumbnailZoomFactorNumericEdit.Location = new System.Drawing.Point(81, 29);
-            this.ThumbnailZoomFactorNumericEdit.Maximum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.ThumbnailZoomFactorNumericEdit.Minimum = new decimal(new int[] {
-            2,
-            0,
-            0,
-            0});
-            this.ThumbnailZoomFactorNumericEdit.Name = "ThumbnailZoomFactorNumericEdit";
-            this.ThumbnailZoomFactorNumericEdit.Size = new System.Drawing.Size(77, 20);
-            this.ThumbnailZoomFactorNumericEdit.TabIndex = 41;
-            this.ThumbnailZoomFactorNumericEdit.Value = new decimal(new int[] {
-            2,
-            0,
-            0,
-            0});
-            this.ThumbnailZoomFactorNumericEdit.ValueChanged += new System.EventHandler(this.OptionChanged_Handler);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(5, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(186, 13);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Edited by Pinguu | EVE-Master Edition";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(5, 64);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 13);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Bla bla bla";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(5, 77);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 13);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Bla bla bla";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(5, 90);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 13);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Bla bla bla";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(5, 129);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 13);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "Bla bla bla";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(5, 116);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(56, 13);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Bla bla bla";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(5, 103);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(56, 13);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "Bla bla bla";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(67, 90);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(56, 13);
-            this.label8.TabIndex = 16;
-            this.label8.Text = "Bla bla bla";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(67, 77);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(56, 13);
-            this.label9.TabIndex = 15;
-            this.label9.Text = "Bla bla bla";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(67, 64);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(56, 13);
-            this.label10.TabIndex = 14;
-            this.label10.Text = "Bla bla bla";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(67, 129);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(56, 13);
-            this.label11.TabIndex = 19;
-            this.label11.Text = "Bla bla bla";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(67, 116);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(56, 13);
-            this.label12.TabIndex = 18;
-            this.label12.Text = "Bla bla bla";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(67, 103);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(56, 13);
-            this.label13.TabIndex = 17;
-            this.label13.Text = "Bla bla bla";
-            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -1106,6 +933,162 @@ namespace EveOPreview.View
             this.label25.TabIndex = 20;
             this.label25.Text = "Bla bla bla";
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(67, 129);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(56, 13);
+            this.label11.TabIndex = 19;
+            this.label11.Text = "Bla bla bla";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(67, 116);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(56, 13);
+            this.label12.TabIndex = 18;
+            this.label12.Text = "Bla bla bla";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(67, 103);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(56, 13);
+            this.label13.TabIndex = 17;
+            this.label13.Text = "Bla bla bla";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(67, 90);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(56, 13);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "Bla bla bla";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(67, 77);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(56, 13);
+            this.label9.TabIndex = 15;
+            this.label9.Text = "Bla bla bla";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(67, 64);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(56, 13);
+            this.label10.TabIndex = 14;
+            this.label10.Text = "Bla bla bla";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(5, 129);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(56, 13);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Bla bla bla";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(5, 116);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(56, 13);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Bla bla bla";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(5, 103);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(56, 13);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Bla bla bla";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(5, 90);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(56, 13);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Bla bla bla";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(5, 77);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(56, 13);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Bla bla bla";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(5, 64);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(56, 13);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Bla bla bla";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(5, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(186, 13);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Edited by Pinguu | EVE-Master Edition";
+            // 
+            // VersionLabel
+            // 
+            this.VersionLabel.AutoSize = true;
+            this.VersionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.VersionLabel.Location = new System.Drawing.Point(133, 9);
+            this.VersionLabel.Name = "VersionLabel";
+            this.VersionLabel.Size = new System.Drawing.Size(49, 20);
+            this.VersionLabel.TabIndex = 4;
+            this.VersionLabel.Text = "1.0.0";
+            // 
+            // NameLabel
+            // 
+            NameLabel.AutoSize = true;
+            NameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            NameLabel.Location = new System.Drawing.Point(4, 9);
+            NameLabel.Name = "NameLabel";
+            NameLabel.Size = new System.Drawing.Size(130, 20);
+            NameLabel.TabIndex = 3;
+            NameLabel.Text = "EVE-O Preview";
+            // 
+            // NotifyIcon
+            // 
+            this.NotifyIcon.ContextMenuStrip = this.TrayMenu;
+            this.NotifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("NotifyIcon.Icon")));
+            this.NotifyIcon.Text = "EVE-O Preview";
+            this.NotifyIcon.Visible = true;
+            this.NotifyIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.RestoreMainForm_Handler);
+            // 
+            // TrayMenu
+            // 
+            this.TrayMenu.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.TrayMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            TitleMenuItem,
+            RestoreWindowMenuItem,
+            SeparatorMenuItem,
+            ExitMenuItem});
+            this.TrayMenu.Name = "contextMenuStrip1";
+            this.TrayMenu.Size = new System.Drawing.Size(238, 76);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1135,6 +1118,7 @@ namespace EveOPreview.View
             this.ZoomTabPage.ResumeLayout(false);
             ZoomSettingsPanel.ResumeLayout(false);
             ZoomSettingsPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ThumbnailZoomFactorNumericEdit)).EndInit();
             this.ZoomAnchorPanel.ResumeLayout(false);
             this.ZoomAnchorPanel.PerformLayout();
             OverlayTabPage.ResumeLayout(false);
@@ -1147,7 +1131,6 @@ namespace EveOPreview.View
             AboutPanel.ResumeLayout(false);
             AboutPanel.PerformLayout();
             this.TrayMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ThumbnailZoomFactorNumericEdit)).EndInit();
             this.ResumeLayout(false);
 
 		}
@@ -1156,7 +1139,6 @@ namespace EveOPreview.View
 		private NotifyIcon NotifyIcon;
 		private ContextMenuStrip TrayMenu;
 		private TabPage ZoomTabPage;
-		private Guna.UI2.WinForms.Guna2CheckBox EnableClientLayoutTrackingCheckBox;
 		private Guna.UI2.WinForms.Guna2CheckBox HideActiveClientThumbnailCheckBox;
 		private Guna.UI2.WinForms.Guna2CheckBox ShowThumbnailsAlwaysOnTopCheckBox;
 		private Guna.UI2.WinForms.Guna2CheckBox HideThumbnailsOnLostFocusCheckBox;
