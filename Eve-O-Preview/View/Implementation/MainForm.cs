@@ -57,12 +57,6 @@ namespace EveOPreview.View
 			}
 		}
 
-		public bool EnableClientLayoutTracking
-		{
-			get => this.EnableClientLayoutTrackingCheckBox.Checked;
-			set => this.EnableClientLayoutTrackingCheckBox.Checked = value;
-		}
-
 		public bool HideActiveClientThumbnail
 		{
 			get => this.HideActiveClientThumbnailCheckBox.Checked;

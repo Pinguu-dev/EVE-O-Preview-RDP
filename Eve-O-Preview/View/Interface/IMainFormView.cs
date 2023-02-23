@@ -14,7 +14,6 @@ namespace EveOPreview.View
 
 		double ThumbnailOpacity { get; set; }
 
-		bool EnableClientLayoutTracking { get; set; }
 		bool HideActiveClientThumbnail { get; set; }
 		bool MinimizeInactiveClients { get; set; }
 		bool ShowThumbnailsAlwaysOnTop { get; set; }

@@ -104,7 +104,6 @@ namespace EveOPreview.Presenters
 
 			this.View.ThumbnailOpacity = this._configuration.ThumbnailOpacity;
 
-			this.View.EnableClientLayoutTracking = this._configuration.EnableClientLayoutTracking;
 			this.View.HideActiveClientThumbnail = this._configuration.HideActiveClientThumbnail;
 			this.View.MinimizeInactiveClients = this._configuration.MinimizeInactiveClients;
 			this.View.ShowThumbnailsAlwaysOnTop = this._configuration.ShowThumbnailsAlwaysOnTop;
@@ -130,7 +129,6 @@ namespace EveOPreview.Presenters
 
 			this._configuration.ThumbnailOpacity = (float)this.View.ThumbnailOpacity;
 
-			this._configuration.EnableClientLayoutTracking = this.View.EnableClientLayoutTracking;
 			this._configuration.HideActiveClientThumbnail = this.View.HideActiveClientThumbnail;
 			this._configuration.MinimizeInactiveClients = this.View.MinimizeInactiveClients;
 			this._configuration.ShowThumbnailsAlwaysOnTop = this.View.ShowThumbnailsAlwaysOnTop;
